@@ -1,5 +1,35 @@
 en:
+
   layouts:
     application:
       default_title: 'Help'
       app_title: 'Wilcox Technologies Help Centre'
+
+    header:
+      app_title: 'W-T Help Centre'
+      videos: 'Videos'
+      doc_hub: 'Documentation'
+      community: 'Community'
+      search_placeholder: 'Search Help Centre...'
+
+
+  welcome:
+    index:
+      html_title: 'Welcome'
+
+      welcome_to_help_centre: 'Welcome to the Wilcox Technologies Help Centre'
+      lead: "Want to learn more about your favourite Wilcox Tech apps?
+            You've come to the right place."
+
+      video_heading: 'Videos'
+      video_desc: 'Watch tutorials and feature tours to familiarise yourself with our apps.'
+      video_btn: 'Watch Now &raquo;'
+
+      doc_heading: 'Documentation'
+      doc_desc: 'Find tips, how-tos, and manuals at our newly designed Doc Hub.'
+      doc_btn: 'Start Reading &raquo;'
+
+      forum_heading: 'Community'
+      forum_desc: 'Talk to our vibrant community of Wilcox Tech employees and other users
+      of our software.'
+      forum_btn: "Stop In and Say 'Hi' &raquo;"

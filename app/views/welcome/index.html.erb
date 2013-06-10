@@ -1,2 +1,25 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%= provide :title, t('.html_title') %>
+
+<h1 class="page-header"><%= t('.welcome_to_help_centre') %></h1>
+
+<p class="lead"><%= t('.lead') %></p>
+
+<div class="row text-center">
+  <div class="span4">
+    <h2><%= t('.video_heading') %></h2>
+    <p><%= t('.video_desc') %></p>
+    <%= link_to t('.video_btn').html_safe, '#', :class => 'btn btn-primary' %>
+  </div>
+
+  <div class="span4">
+    <h2><%= t('.doc_heading') %></h2>
+    <p><%= t('.doc_desc') %></p>
+    <%= link_to t('.doc_btn').html_safe, '#', :class => 'btn btn-primary' %>
+  </div>
+
+  <div class="span4">
+    <h2><%= t('.forum_heading') %></h2>
+    <p><%= t('.forum_desc') %></p>
+    <%= link_to t('.forum_btn').html_safe, 'http://support.wilcox-tech.com', :class => 'btn btn-primary' %>
+  </div>
+</div>
