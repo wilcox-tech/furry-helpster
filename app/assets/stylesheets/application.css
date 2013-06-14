@@ -16,11 +16,6 @@
 
 @import url('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
 
-/* Branding.  This is W-T so we really want an image.. but for now this will do */
-.brand {
-    font-size: x-large !important;
-}
-
 /* Larger table headers */
 thead {
     font-size: larger;
