@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Version:</b>
+  <%= @doc_group.version.friendly_name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @doc_group.name %>
+</p>
+
+<p>
+  <b>Private:</b>
+  <%= @doc_group.private %>
+</p>
+
+<p>
+  <b>Primary doc:</b>
+  <%= @doc_group.primary_doc_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_doc_group_path(@doc_group) %> |
+<%= link_to 'Back', admin_doc_groups_path %>

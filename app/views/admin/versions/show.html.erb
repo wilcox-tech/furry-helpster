@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @version.name %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @version.state %>
+</p>
+
+<p>
+  <b>Private:</b>
+  <%= @version.private %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_version_path(@version) %> |
+<%= link_to 'Back', admin_versions_path %>
