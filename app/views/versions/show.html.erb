@@ -27,7 +27,9 @@
 
 <div class="row">
   <div class="span4">
-    <%= render 'group_tree', { :version => @version } %>
+    <ul>
+      <%= render @version.head_groups %>
+    </ul>
   </div>
 
   <div class="span8">

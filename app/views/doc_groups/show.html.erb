@@ -6,7 +6,9 @@
 
 <div class="row">
   <div class="span4">
-    <%= render 'group_toc' %>
+    <ul class="nav nav-list">
+      <%= render @doc_group.version.head_groups %>
+    </ul>
   </div>
   <div class="span8">
     <%= render(@doc_group.primary_doc || 'generic_first_page') %>

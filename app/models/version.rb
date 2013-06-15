@@ -9,4 +9,8 @@ class Version < ActiveRecord::Base
   def friendly_name
     "#{self.product.name} v#{self.name}"
   end
+
+  def head_groups
+    self.doc_groups.where(:parent_id => nil).includes(:children)
+  end
 end

@@ -1,0 +1,22 @@
+<%# This is ugly and I do not like it.
+    However, Rails refuses to recognise :locals => { :active => @doc_group } when
+    added to the doc_groups#show template, and we need to know what group, if any,
+    is the active one to style and display properly.  So, we use the global if it
+    exists, or set it to nil if it doesn't. %>
+<% @doc_group ||= nil %>
+
+<li <%= 'class=active' if doc_group == @doc_group %>>
+  <%= link_to doc_group.name, doc_group %>
+  <% if doc_group.children.any? %>
+  <ul>
+    <%= render doc_group.children %>
+  </ul>
+  <% end %>
+  <% if doc_group == @doc_group %>
+  <ul>
+    <% doc_group.documents.each do |doc| %>
+    <li><%= link_to doc.name, doc %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</li>
