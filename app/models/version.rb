@@ -1,7 +1,8 @@
 class Version < ActiveRecord::Base
   belongs_to :product
+  has_many :doc_groups
 
-  attr_accessible :name, :private, :state
+  attr_accessible :name, :private, :product_id, :state
 
   scope :all_public, where(:private => false)
 
