@@ -1,0 +1,18 @@
+<ul class="breadcrumb">
+  <li>
+    <%= link_to @doc_group.version.friendly_name, @doc_group.version %>
+    <span class="divider">&raquo;</span>
+  </li>
+  <%# down the rabbit hole.. %>
+  <%= n = @doc_group.parent
+      t = []
+      until n.nil?
+        t << "<li>#{link_to(n.name, n)}<span class=\"divider\">&raquo;</span></li>"
+        n = n.parent
+      end
+      t.reverse.join.html_safe
+  %>
+  <li class="active">
+    <%= @doc_group.name %>
+  </li>
+</ul>

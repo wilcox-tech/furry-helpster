@@ -1,0 +1,12 @@
+<ul>
+  <% @doc_group.children.each do |subgroup| %>
+  <li><%= link_to subgroup.name, subgroup %></li>
+  <% end %>
+</ul>
+
+<dl>
+  <% @doc_group.documents.each do |doc| %>
+  <dt><%= link_to doc.name, doc %></dt>
+  <dd><%= truncate(doc.content, :length => 50) %></dd>
+  <% end %>
+</dl>

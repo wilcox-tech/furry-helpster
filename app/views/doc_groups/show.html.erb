@@ -1,0 +1,15 @@
+<% provide :title, @doc_group.name %>
+
+<%= render 'breadcrumb' %>
+
+<h1 class="page-header"><%= @doc_group.name %></h1>
+
+<div class="row">
+  <div class="span4">
+    <%= render 'group_toc' %>
+  </div>
+  <div class="span8">
+    <%= render(@doc_group.primary_doc || 'generic_first_page') %>
+  </div>
+</div>
+
