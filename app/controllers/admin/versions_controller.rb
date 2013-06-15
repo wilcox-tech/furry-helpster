@@ -44,7 +44,7 @@ class Admin::VersionsController < Admin::ApplicationController
 
     respond_to do |format|
       if @version.save
-        format.html { redirect_to @version, notice: 'Version was successfully created.' }
+        format.html { redirect_to admin_version_url(@version), notice: 'Version was successfully created.' }
         format.json { render json: @version, status: :created, location: @version }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class Admin::VersionsController < Admin::ApplicationController
 
     respond_to do |format|
       if @version.update_attributes(params[:version])
-        format.html { redirect_to @version, notice: 'Version was successfully updated.' }
+        format.html { redirect_to admin_version_url(@version), notice: 'Version was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

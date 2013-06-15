@@ -44,7 +44,7 @@ class DocGroupsController < ApplicationController
 
     respond_to do |format|
       if @doc_group.save
-        format.html { redirect_to @doc_group, notice: 'Doc group was successfully created.' }
+        format.html { redirect_to admin_doc_group_url(@doc_group), notice: 'Doc group was successfully created.' }
         format.json { render json: @doc_group, status: :created, location: @doc_group }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class DocGroupsController < ApplicationController
 
     respond_to do |format|
       if @doc_group.update_attributes(params[:doc_group])
-        format.html { redirect_to @doc_group, notice: 'Doc group was successfully updated.' }
+        format.html { redirect_to admin_doc_group_url(@doc_group), notice: 'Doc group was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
