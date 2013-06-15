@@ -1,6 +1,6 @@
 <% provide :title, t('.html_title', :version => @version.friendly_name) %>
 
-<h1 class="page-header"><%= t('.title', :version => @version.friendly_name) %></h1>
+<h1 class="page-header"><%= t('.title', :version => @version.friendly_name) %> <%= "<small>#{t('.beta')}</small>".html_safe if @version.state == 'future' %></h1>
 
 <% case @version.state
      when 'deprecated'

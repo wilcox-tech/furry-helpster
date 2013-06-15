@@ -51,6 +51,7 @@ en:
       html_title: '%{version} Doc Hub'
 
       title: 'Help for %{version}'
+      beta: 'BETA'
 
       this_version_is_deprecated: 'Warning: This version of %{product} is deprecated.'
       current_version_is_here: 'Documentation for the current version can be found here.'
