@@ -3,6 +3,8 @@ class Version < ActiveRecord::Base
 
   attr_accessible :name, :private, :state
 
+  scope :all_public, where(:private => false)
+
   def friendly_name
     "#{self.product.name} v#{self.name}"
   end

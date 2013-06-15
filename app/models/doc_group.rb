@@ -7,6 +7,8 @@ class DocGroup < ActiveRecord::Base
 
   attr_accessible :name, :primary_doc_id, :private, :version_id
 
+  scope :all_public, where(:private => false)
+
   def friendly_name
     "#{self.version.project.name} v#{self.version.name} - #{self.name}"
   end
