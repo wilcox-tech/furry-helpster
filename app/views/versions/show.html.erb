@@ -24,3 +24,23 @@
      else
    end
 %>
+
+<div class="row">
+  <div class="span4">
+    <%= render 'group_tree', { :version => @version } %>
+  </div>
+
+  <div class="span8">
+    <form class="form-search">
+      <input type="text" class="input-large span6" placeholder="Search help for <%= @version.friendly_name %>...">
+      <button class="btn btn-success">Search</button>
+    </form>
+    <h2>Popular resources for <%= @version.friendly_name %></h2>
+    <dl>
+      <dt>Article 1</dt>
+      <dd>Summary of article contents go here.</dd>
+      <dt>Video 1</dt>
+      <dd>Summary of video goes here.</dd>
+    </dl>
+  </div>
+</div>
