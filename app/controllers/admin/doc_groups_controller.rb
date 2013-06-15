@@ -1,4 +1,4 @@
-class DocGroupsController < ApplicationController
+class Admin::DocGroupsController < Admin::ApplicationController
   # GET /doc_groups
   # GET /doc_groups.json
   def index
