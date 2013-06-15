@@ -1,0 +1,26 @@
+<% provide :title, t('.html_title', :version => @version.friendly_name) %>
+
+<h1 class="page-header"><%= t('.title', :version => @version.friendly_name) %></h1>
+
+<% case @version.state
+     when 'deprecated'
+     %>
+<div class="alert alert-danger">
+  <strong><%= t('.this_version_is_deprecated', :product => @version.product.name) %></strong>
+  <%= link_to t('.current_version_is_here'), @version.product.current_version unless @version.product.current_version.nil? %>
+  <%= t('.please_consider_upgrading_to_current', :product => @version.product.name) %>
+</div>
+<%
+     when 'current'
+   # do nothing
+     when 'future'
+     %>
+<div class="alert alert-warning">
+  <strong><%= t('.this_version_is_a_wip', :product => @version.product.name) %></strong>
+  <%= link_to t('.current_version_is_here'), @version.product.current_version unless @version.product.current_version.nil? %>
+  <%= t('.please_note_beta_stuff_changes', :product => @version.product.name) %>
+</div>
+<%
+     else
+   end
+%>

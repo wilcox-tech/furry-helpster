@@ -33,3 +33,30 @@ en:
       forum_desc: 'Talk to our vibrant community of Wilcox Tech employees and other users
       of our software.'
       forum_btn: "Stop In and Say 'Hi' &raquo;"
+
+
+  products:
+    index:
+      html_title: 'Products'
+      title: 'Select a product to view its Doc Hub'
+
+    show:
+      html_title: '%{product} Doc Hub'
+
+      title: 'Help for %{product}'
+
+
+  versions:
+    show:
+      html_title: '%{version} Doc Hub'
+
+      title: 'Help for %{version}'
+
+      this_version_is_deprecated: 'Warning: This version of %{product} is deprecated.'
+      current_version_is_here: 'Documentation for the current version can be found here.'
+      please_consider_upgrading_to_current: 'For the latest security updates, newest features,
+      and more support options, please upgrade to the current version of %{product}.'
+
+      this_version_is_a_wip: 'Note: This version of %{product} is still in development.'
+      please_note_beta_stuff_changes: 'Due to the nature of beta software, the features and
+      interface of %{product} may change during development without notice.'
