@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Product</th>
     <th>Name</th>
     <th>State</th>
     <th>Private</th>
@@ -12,6 +13,7 @@
 
 <% @versions.each do |version| %>
   <tr>
+    <td><%= version.product.name %></td>
     <td><%= version.name %></td>
     <td><%= version.state %></td>
     <td><%= version.private %></td>
