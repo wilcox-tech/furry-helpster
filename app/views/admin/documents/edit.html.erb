@@ -1,6 +1,8 @@
-<h1>Editing document</h1>
+<% provide :title, t('.html_title', :doc => @document.name) %>
+
+<h1 class="page-header"><%= t('.title', :doc => @document.name) %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @document %> |
-<%= link_to 'Back', admin_documents_path %>
+<%= link_to t('.show'), @document %> |
+<%= link_to t('.back'), admin_documents_path %>

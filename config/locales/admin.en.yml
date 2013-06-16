@@ -1,0 +1,76 @@
+en:
+  admin:
+    products:
+      index:
+
+      new:
+
+      show:
+
+      edit:
+
+
+    versions:
+      index:
+
+      new:
+
+      show:
+
+      edit:
+
+
+    doc_groups:
+      index:
+        html_title: 'Document Groups'
+        title: 'All document groups'
+        version: 'Version'
+        name: 'Group Name'
+        private: 'Private?'
+        primary_doc: 'Primary Document'
+        show: 'Display'
+        edit: 'Change'
+        destroy: 'Remove'
+        new: 'Add a new document group'
+
+      new:
+        html_title: 'New Document Group'
+        title: 'Add a new document group'
+        back: 'Back to Document Group list'
+
+      show:
+
+
+      edit:
+        html_title: 'Edit %{group}'
+        title: 'Edit Document Group "%{group}"'
+        show: 'Display'
+        back: 'Back to Document Group list'
+
+
+    documents:
+      index:
+        html_title: 'Documents'
+        title: 'All documents'
+        group: 'Document Group'
+        name: 'Name'
+        content: 'Content'
+        private: 'Private?'
+        show: 'Display'
+        edit: 'Change'
+        destroy: 'Remove'
+        new: 'Add a new document'
+
+      new:
+        html_title: 'New Document'
+        title: 'Add a new document'
+        back: 'Back to Document list'
+
+      show:
+
+
+      edit:
+        html_title: 'Edit %{doc}'
+        title: 'Edit document "%{doc}"'
+        show: 'Display'
+        back: 'Back to Document list'

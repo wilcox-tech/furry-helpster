@@ -1,6 +1,8 @@
-<h1>Editing doc_group</h1>
+<% provide :title, t('.html_title', :group => @doc_group.name) %>
+
+<h1 class="page-header"><%= t('.title', :group => @doc_group.name) %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @doc_group %> |
-<%= link_to 'Back', admin_doc_groups_path %>
+<%= link_to t('.show'), @doc_group %> |
+<%= link_to t('.back'), admin_doc_groups_path %>
