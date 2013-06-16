@@ -21,3 +21,6 @@ gem 'thin'
 
 # We use PostgreSQL
 gem 'pg'
+
+# Shiny happy Markdown
+gem 'redcarpet'

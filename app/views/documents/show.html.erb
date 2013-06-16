@@ -1,0 +1,18 @@
+<% provide :title, @document.name %>
+
+<%= render 'breadcrumb' %>
+
+<h1 class="page-header"><%= @document.name %></h1>
+
+<div class="row">
+  <div class="span4">
+    <ul class="nav nav-list">
+      <% @doc_group = @document.doc_group %>
+      <%= render @doc_group %>
+    </ul>
+  </div>
+
+  <div class="span8">
+    <%= markdown @document.content %>
+  </div>
+</div>
