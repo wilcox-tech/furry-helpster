@@ -5,18 +5,20 @@
     exists, or set it to nil if it doesn't. %>
 <% @doc_group ||= nil %>
 
-<li <%= 'class=active' if doc_group == @doc_group %>>
+<li class="group<%= ' active' if doc_group.is_or_has(@doc_group) %>">
   <%= link_to doc_group.name, doc_group %>
-  <% if doc_group.children.any? %>
-  <ul>
-    <%= render doc_group.children %>
-  </ul>
-  <% end %>
-  <% if doc_group == @doc_group %>
-  <ul>
-    <% doc_group.documents.each do |doc| %>
-    <li><%= link_to doc.name, doc %></li>
+
+  <% if doc_group.is_or_has(@doc_group) %>
+    <% if doc_group.children.any? %>
+    <ul class="nav nav-list">
+      <%= render doc_group.children %>
+    </ul>
     <% end %>
-  </ul>
+
+    <ul class="nav nav-list">
+      <% doc_group.documents.each do |doc| %>
+      <li class="doc<%= ' active' if doc == @document %>"><%= link_to doc.name, doc %></li>
+      <% end %>
+    </ul>
   <% end %>
 </li>

@@ -2,6 +2,7 @@ FurryHelpster::Application.routes.draw do
   resources :products, :only => [:index, :show]
   resources :versions, :only => [:show]
   resources :doc_groups, :only => [:show]
+  resources :documents, :only => [:show]
 
   namespace :admin do
     resources :doc_groups

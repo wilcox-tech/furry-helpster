@@ -11,7 +11,11 @@ class DocGroup < ActiveRecord::Base
 
   scope :all_public, where(:private => false)
 
+  def deep_contains(group)
+    self.children.include?(group)
+  end
+
   def friendly_name
-    "#{self.version.project.name} v#{self.version.name} - #{self.name}"
+    "#{self.version.product.name} v#{self.version.name} - #{self.name}"
   end
 end

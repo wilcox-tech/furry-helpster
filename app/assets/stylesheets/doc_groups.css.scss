@@ -1,3 +1,21 @@
 // Place all the styles related to the DocGroups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav-list>.active>a {
+  font-weight: bolder;
+}
+
+li {
+  &.group {
+    list-style-position: inside;
+    list-style-image: url(/assets/group.png);
+    &.active {
+      list-style-image: url(/assets/group-active.png)
+    }
+  }
+  &.doc {
+    list-style-position: inside;
+    list-style-image: url(/assets/doc.gif);
+  }
+}
