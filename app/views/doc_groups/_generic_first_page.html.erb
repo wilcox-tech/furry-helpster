@@ -7,6 +7,6 @@
 <dl>
   <% @doc_group.documents.each do |doc| %>
   <dt><%= link_to doc.name, doc %></dt>
-  <dd><%= truncate(doc.content, :length => 50) %></dd>
+  <dd><%= truncate(doc.content, :length => 150, :separator => ' ') %></dd>
   <% end %>
 </dl>
