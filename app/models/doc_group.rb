@@ -13,6 +13,15 @@ class DocGroup < ActiveRecord::Base
 
   def deep_contains(group)
     self.children.include?(group)
+
+    # eventually, someday, recurse on children
+  end
+
+  def is_or_has(group)
+    return false if group == nil
+    return false if group == self.parent # quick false, reduces queries (yes, I profiled)
+
+    self == group || self.deep_contains(group)
   end
 
   def friendly_name
